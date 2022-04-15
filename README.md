@@ -1,2 +1,3 @@
-# ButiEngine_Release
-ButiEngine使用のためのリポジトリ
+# ButiEngine
+
+DirectX12を使用した自作エンジン

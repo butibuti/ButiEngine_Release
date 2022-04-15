@@ -31,23 +31,9 @@
 *.out
 *.app
 
-*.suo
-*.db
-*.pdb
-*.opendb
-
 *.zip
-*.idb
-*.exp
 
 .vs/
+ButiScriptExtension/
 Temp/
 output/
-ButiEngine_User/Resources/*
-!ButiEngine_User/Resources/Shader/
-ButiEngine_User/Resources/Shader/Compiled/
-ButiEngine_User/ProtBuf/*
-!ButiEngine_User/ProtBuf/EngineEditorCommunicate.proto
-
-Libs/Library/cereal/
-Libs/Library/Source/
