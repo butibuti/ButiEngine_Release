@@ -1,0 +1,2 @@
+# ButiFont
+stb_truetypeをラッピングしたもの
