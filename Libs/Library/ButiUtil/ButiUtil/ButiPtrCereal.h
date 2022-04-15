@@ -1,6 +1,0 @@
-#ifndef BUTIPTR_CEREAL_H
-#define BUTIPTR_CEREAL_H
-
-
-
-#endif // !BUTIPTR_CEREAL_H

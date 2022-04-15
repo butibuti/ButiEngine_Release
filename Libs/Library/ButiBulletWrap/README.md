@@ -1,2 +1,0 @@
-# ButiBulletWrap
-Bulletを自作のゲームエンジンに組み込むためのライブラリ
