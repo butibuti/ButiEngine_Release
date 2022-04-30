@@ -1,4 +1,4 @@
-
+#include"Header/GameObjects/DefaultGameComponent/DefaultGameComponent.h"
 #include "MeshDrawComponent.h"
 namespace ButiEngine {
 
@@ -15,16 +15,16 @@ namespace ButiEngine {
 		template<class Archive>
 		void serialize(Archive& archive)
 		{
-			archive(shp_drawComponent);
-			archive(shp_particleBuffer);
+			archive(vlp_drawComponent);
+			archive(vlp_particleBuffer);
 			archive(time);
 		}
 	protected:
 
 		void OnUpdate() override;
 	private:
-		Value_ptr<MeshDrawComponent> shp_drawComponent;
-		Value_ptr<CBuffer<ParticleParameter>> shp_particleBuffer;
+		Value_ptr<MeshDrawComponent> vlp_drawComponent;
+		Value_ptr<ButiRendering::CBuffer<ButiRendering::ParticleParameter>> vlp_particleBuffer;
 		float time = 0;
 	};
 

@@ -2,22 +2,23 @@
 #include"MeshDrawComponent.h"
 
 namespace ButiEngine {
-
-	class ModelAnimation;
-	struct ModelDrawData;
+namespace ButiRendering {
+class ModelAnimation;
+class IModelObject;
+}
 	class ModelDrawComponent :public MeshDrawComponent
 	{
 	public:
-		ModelDrawComponent(const ModelTag& arg_modelTag, const ShaderTag& arg_shaderTag, Value_ptr< DrawInformation >arg_shp_drawInfo,  Value_ptr<Transform> arg_shp_transform = nullptr);
+		ModelDrawComponent(const ModelTag& arg_modelTag, const ShaderTag& arg_shaderTag, Value_ptr< ButiRendering::DrawInformation >arg_vlp_drawInfo,  Value_ptr<Transform> arg_vlp_transform = nullptr);
 		ModelDrawComponent() {}
-		std::string GetGameComponentName() {
+		std::string GetGameComponentName()const override {
 			return "ModelDraw";
 		}
 
 		void OnSet()override;
-		virtual Value_ptr<ModelDrawData> GetModelData();
+		virtual Value_ptr<ButiRendering::IModelObject> GetModelData();
 		Value_ptr<GameComponent> Clone()override;
-		Value_ptr<IBoneObject> GetBone();
+		Value_ptr<ButiRendering::IBoneObject> GetBone();
 		void OnShowUI()override;
 
 
@@ -29,16 +30,15 @@ namespace ButiEngine {
 			archive(modelTag);
 			archive(materialTag);
 			archive(isActive);
-			archive(shp_transform);
-			archive(shp_drawInfo);
-			//archive(shp_bone);
+			archive(vlp_transform);
+			archive(vlp_drawInfo);
 		}
 
 
 	protected:
-		Value_ptr<IBoneObject> shp_bone;
+		Value_ptr<ButiRendering::IBoneObject> vlp_bone;
 		void CreateData()override;
-		Value_ptr<ModelDrawData> shp_modelData;
+		Value_ptr<ButiRendering::IModelObject> vlp_modelData;
 	private:
 	};
 

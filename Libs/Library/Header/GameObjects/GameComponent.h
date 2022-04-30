@@ -11,7 +11,8 @@ public:
 	void PreInitialize()override {}
 	void Update();
 	virtual void Start() {}
-	void Set(Value_weak_ptr<GameObject> arg_wkp_gameObj);
+	virtual void End() {}
+	void Set(Value_weak_ptr<GameObject> arg_vwp_gameObj);
 	void SetIsRemove(bool arg_isRemove) {
 		isRemove = arg_isRemove;
 	}
@@ -48,9 +49,9 @@ public:
 	bool IsOverrideOnUpdate();
 protected:
 	virtual void OnUpdate(){}
-	Value_ptr<ICamera> GetCamera();
-	Value_ptr<ICamera> GetCamera(const std::uint32_t arg_camNum);
-	Value_ptr<ICamera> GetCamera(const std::string& arg_camName);
+	Value_ptr<ButiRendering::ICamera> GetCamera();
+	Value_ptr<ButiRendering::ICamera> GetCamera(const std::uint32_t arg_camNum);
+	Value_ptr<ButiRendering::ICamera> GetCamera(const std::string& arg_camName);
 	Value_weak_ptr<GameObjectManager> GetManager();
 	Value_weak_ptr<ICollisionManager> GetCollisionManager();
 	Value_ptr<GameObjectTagManager> GetTagManager();
