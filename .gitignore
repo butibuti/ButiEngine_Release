@@ -39,6 +39,7 @@
 *.zip
 *.idb
 *.exp
+*.aps
 
 .vs/
 Temp/
@@ -49,5 +50,18 @@ ButiEngine_User/Resources/Shader/Compiled/
 ButiEngine_User/ProtBuf/*
 !ButiEngine_User/ProtBuf/EngineEditorCommunicate.proto
 
-Libs/Library/cereal/
-Libs/Library/Source/
+Libs/Library/ButiCereal/
+Libs/Library/ButiScript/
+Libs/Library/ButiInput/
+Libs/Library/ButiSound/
+Libs/Library/ButiEventSystem/
+Libs/Library/ButiMemorySystem/
+Libs/Library/ButiRendering_Dx12/
+Libs/Library/ButiEngineEditor/
+Libs/Library/ButiEngineHeader/
+Libs/Library/ButiBulletWrap/
+Libs/Library/ButiUtil/
+Libs/Library/ButiMath/
+Libs/Library/ButiFont/
+Libs/Library/ButiVive/
+Libs/Library/imGUI/

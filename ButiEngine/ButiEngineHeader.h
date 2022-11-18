@@ -7,13 +7,12 @@
 
 
 
-#define WIN32_LEAN_AND_MEAN             
+#define WIN32_LEAN_AND_MEAN           
 #pragma once
 #include<cstdint>
 const std::int32_t splitNum = 8;
 #include<Windows.h>
 
-#include <memory.h>
 #include <tchar.h>
 #include <wrl.h>
 
@@ -24,12 +23,8 @@ const std::int32_t splitNum = 8;
 #include <math.h>
 #include<direct.h>
 
-
-
-#include<ctime>
 #include<chrono>
 
-// STL
 #include <vector>
 #include <list>
 #include <map>
@@ -42,26 +37,13 @@ const std::int32_t splitNum = 8;
 #include <exception>
 #include <stdexcept>
 
-
-
-
-#pragma comment( lib, "d3d12.lib" )
-#pragma comment( lib, "DXGI.lib" )
-#pragma comment( lib, "dxguid.lib" )
-#pragma comment( lib, "comctl32.lib" )
-
-
-
-
-
 #pragma warning(disable:4192)
 
+#include"ButiMemorySystem/ButiMemorySystem/MemoryAllocator.h"
+#include"ButiEngineHeader/Header/Device/GUI.h"
+#include"ButiRendering_Dx12/ButiRendering/Common.h"
 
-
-
-#pragma comment(lib,"windowscodecs.lib")
-
-
+#include"ButiSound/ButiSound/ResourceInterface.h"
 #include"ButiMemorySystem/ButiMemorySystem/ButiList.h"
 #include"Header/Common.h"
 #include"Header/GameObjects/DefaultGameComponent/DefaultGameComponent.h"
